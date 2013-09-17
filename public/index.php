@@ -25,7 +25,7 @@ $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 
 // Define routes
 $app->get('/', function () use ($app) {
-    $app->render('index.html');
+    $app->render('index.html.twig', array('date' => new \DateTime('last friday')));
 });
 
 // Run app
