@@ -37,6 +37,7 @@ $app->view->parserOptions = array(
     'strict_variables' => false,
     'autoescape' => true
 );
+$app->view->getInstance()->addGlobal('app', $app);
 $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 
 // Define routes
