@@ -40,9 +40,20 @@ $app->view->parserOptions = array(
 $app->view->getInstance()->addGlobal('app', $app);
 $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 
+
 // Define routes
 $app->get('/', function () use ($app) {
     $app->render('index.html.twig', array('date' => new \DateTime('last friday')));
+});
+
+// 404 Not Found handler
+$app->notFound(function () use ($app) {
+    $app->render('404.html.twig');
+});
+
+// Error handler
+$app->error(function () use ($app) {
+    $app->render('500.html.twig');
 });
 
 // Run app
