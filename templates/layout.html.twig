@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Metas -->
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width">
+		<title>Simple Slim example</title>
+		<!-- Styles -->
+		<link rel="stylesheet" href="css/style.css">
+		{% block head_styles %}{% endblock %}
+		<!-- Scripts -->
+		<script src="js/vendor/custom.modernizr.js"></script>
+		{% block head_scripts %}{% endblock %}
+	</head>
+	<body>
+		<div class="row">
+			<div class="large-12 columns">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+		<script>
+			document.write('<script src=' +
+			('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
+			'.js><\/script>')
+		</script>
+		<script src="js/vendor/foundation.min.js"></script>
+		{% block body_scripts %}{% endblock %}
+	</body>
+</html>
