@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>Simple Slim example</title>
-	</head>
-	<body>
-		<h1>Simple Slim example</h1>
-		<p>This is being rendered from a <strong>Twig</strong> template.</p>
-		<p>Last friday was &quot;{{ date|date('Y-m-d') }}&quot;.</p>
-	</body>
-</html>
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+	<h1>Simple Slim example</h1>
+	<p>This is being rendered from a <strong>Twig</strong> template.</p>
+	<p>Last friday was &quot;{{ date|date('Y-m-d') }}&quot;.</p>
+{% endblock content %}
