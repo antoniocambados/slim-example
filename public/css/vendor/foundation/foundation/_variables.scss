@@ -2,6 +2,17 @@
 // Foundation Variables
 //
 
+// Project variables
+$color-background: #3A4D77;
+$color-text-light: #D7DFF0;
+$color-text-dark:  #2A3558;
+$color-lime:       #99CC33;
+$color-yellow:     #FFD600;
+$color-orange:     #FF8500;
+$color-red:        #EE4D4D;
+
+
+
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
 $base-font-size: 100% !default;
@@ -63,8 +74,8 @@ $em-base: 16px !default;
 
 $default-float: left;
 
-// $body-bg: #fff;
-// $body-font-color: #222;
+$body-bg: $color-background;
+$body-font-color: $color-text-light;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -79,10 +90,10 @@ $default-float: left;
 
 // Colors
 
-// $primary-color: #2ba6cb;
-// $secondary-color: #e9e9e9;
-// $alert-color: #c60f13;
-// $success-color: #5da423;
+$primary-color: $color-text-light;
+$secondary-color: $color-text-dark;
+$alert-color: $color-red;
+$success-color: $color-lime;
 
 // Make sure border radius matches unless we want it different.
 
@@ -172,10 +183,10 @@ $default-float: left;
 
 // Control header font styles
 
-// $header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-family: "Pacifico", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $header-font-weight: bold;
 // $header-font-style: normal;
-// $header-font-color: #222;
+$header-font-color: $color-lime;
 // $header-line-height: 1.4;
 // $header-top-margin: .2em;
 // $header-bottom-margin: .5em;
@@ -183,12 +194,12 @@ $default-float: left;
 
 // Control header font sizes
 
-// $h1-font-size: em-calc(44);
-// $h2-font-size: em-calc(37);
-// $h3-font-size: em-calc(27);
-// $h4-font-size: em-calc(23);
-// $h5-font-size: em-calc(18);
-// $h6-font-size: 1em;
+$h1-font-size: em-calc(52.8);
+$h2-font-size: em-calc(44.4);
+$h3-font-size: em-calc(32.4);
+$h4-font-size: em-calc(27.6);
+$h5-font-size: em-calc(21.6);
+$h6-font-size: 1em;
 
 // Control how subheaders are styled.
 
@@ -224,8 +235,8 @@ $default-float: left;
 // Style anchors
 
 // $anchor-text-decoration: none;
-// $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: darken($primary-color, 5%);
+$anchor-font-color: $color-yellow;
+$anchor-font-color-hover: adjust_hue($anchor-font-color, 6);
 
 // Style the <hr> element
 
@@ -384,8 +395,8 @@ $default-float: left;
 
 // We use these to control button border styles.
 
-// $button-border-width: 1px;
-// $button-border-style: solid;
+$button-border-width: 0px;
+$button-border-style: solid;
 
 // We use this to set the default radius used throughout the core.
 

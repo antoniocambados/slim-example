@@ -1,6 +1,10 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
+// Web fonts
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
 // This includes all of the foundation global elements that are needed to work with any of the other files.
 @import "vendor/normalize",
-  "vendor/foundation/foundation";
+				"vendor/foundation/foundation",
+				"style/typography";
