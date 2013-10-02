@@ -1,7 +1,5 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-	<h1>Simple Slim example</h1>
-	<p>This is being rendered from a <strong>Twig</strong> template.</p>
-	<p>Last friday was &quot;{{ date|date('Y-m-d') }}&quot;.</p>
+	{% include "index/_profile.html.twig" %}
 {% endblock content %}

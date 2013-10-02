@@ -3,13 +3,15 @@
 //
 
 // Project variables
-$color-background: #3A4D77;
-$color-text-light: #D7DFF0;
-$color-text-dark:  #2A3558;
-$color-lime:       #99CC33;
-$color-yellow:     #FFD600;
-$color-orange:     #FF8500;
-$color-red:        #EE4D4D;
+$color-background:  #3A4D77;
+$color-text-light:  #D7DFF0;
+$color-text-dark:   #2A3558;
+$color-text-darker: #19233B;
+$color-lime:        #99CC33;
+$color-lime-bright: #C8F44B;
+$color-yellow:      #FFD600;
+$color-orange:      #FF8500;
+$color-red:         #EE4D4D;
 
 
 
@@ -1190,8 +1192,8 @@ $button-border-style: solid;
 
 // These control the background color for the table and even rows
 
-// $table-bg: #fff;
-// $table-even-row-bg: #f9f9f9;
+$table-bg: $color-text-light;
+$table-even-row-bg: darken($table-bg, 5%);
 
 // These control the table cell border style
 

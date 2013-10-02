@@ -5940,7 +5940,7 @@ ul.pagination li {
 
 /* Tables */
 table {
-  background: white;
+  background: #d7dff0;
   margin-bottom: 1.25em;
   border: solid 1px #dddddd;
 }
@@ -5965,7 +5965,7 @@ table tr td {
   color: #222222;
 }
 table tr.even, table tr.alt, table tr:nth-of-type(even) {
-  background: #f9f9f9;
+  background: #c4d0e9;
 }
 table thead tr th,
 table tfoot tr th,
@@ -6193,8 +6193,92 @@ a.th {
 }
 
 /*
+ * Background
+ */
+body {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-image: url("/img/background.png");
+  margin-top: 50px;
+}
+
+/*
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  text-shadow: -3px 4px 0px #2a3558;
+  text-shadow: -3px 4px 0px #2a3558, 1px -1px 0px #c8f44b;
+}
+
+/*
+ * Profile
+ */
+#profile .profile-picture {
+  max-height: 300px;
+  max-width: 300px;
+  background-color: #ffffff;
+  border: 7px solid #2a3558;
+  margin: 0 auto;
+  position: relative;
+}
+#profile .profile-picture .triangle {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+}
+#profile .profile-picture .triangle.triangle-up {
+  top: -14px;
+  left: -14px;
+  border-width: 64px 64px 0 0;
+  border-color: #2a3558 transparent transparent transparent;
+}
+#profile .profile-picture .triangle.triangle-down {
+  bottom: -14px;
+  right: -14px;
+  border-width: 0 0 64px 64px;
+  border-color: transparent transparent #2a3558 transparent;
+}
+#profile .profile-info h1 {
+  text-align: center;
+}
+#profile .profile-info table {
+  border: 7px solid #2a3558;
+}
+#profile .profile-info table tr {
+  border-bottom: 1px solid #2a3558;
+}
+#profile .profile-info table tr:last-child {
+  border-bottom-width: 0px;
+}
+#profile .profile-info table tr td {
+  line-height: 2em;
+}
+#profile .profile-info table tr .bullet {
+  width: 42px;
+  background-color: #2a3558;
+  margin-right: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+#profile .profile-info table tr .bullet.bullet-location {
+  background-image: url("/img/bullet-location.png");
+}
+#profile .profile-info table tr .bullet.bullet-email {
+  background-image: url("/img/bullet-email.png");
+}
+#profile .profile-info table tr .bullet.bullet-about {
+  background-image: url("/img/bullet-about.png");
+}
+#profile .profile-info table tr p:last-child {
+  margin-bottom: 0px;
+}
+
+/* Styles for screens that are atleast 768px; */
+@media only screen and (min-width: 768px) {
+  #profile .profile-picture {
+    float: right;
+  }
+  #profile .profile-info {
+    text-align: left;
+  }
 }

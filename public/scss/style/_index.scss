@@ -1,0 +1,98 @@
+// Index
+
+/*
+ * Profile
+ */
+#profile {
+
+	.profile-picture {
+		max-height: 300px;
+		max-width: 300px;
+		background-color: #ffffff;
+		border: 7px solid $color-text-dark;
+		margin: 0 auto;
+		position: relative;
+
+		.triangle {
+			position: absolute;
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+
+			&.triangle-up {
+				top: -14px;
+				left: -14px;
+				border-width: 64px 64px 0 0;
+				border-color: $color-text-dark transparent transparent transparent;
+			}
+			&.triangle-down {
+				bottom: -14px;
+				right: -14px;
+				border-width: 0 0 64px 64px;
+				border-color: transparent transparent $color-text-dark transparent;
+			}
+		}
+	}
+
+	.profile-info {
+
+		h1 {
+			text-align: center;
+		}
+
+		table {
+			border: 7px solid $color-text-dark;
+
+			tr {
+				border-bottom: 1px solid $color-text-dark;
+
+				&:first-child {
+					// border-top-right-radius: 3px;
+				}
+				&:last-child {
+					// border-bottom-right-radius: 3px;
+					border-bottom-width: 0px;
+				}
+
+				td {
+					line-height: em-calc(32);
+				}
+
+				.bullet {
+					width: 42px;
+					background-color: $color-text-dark;
+					margin-right: 10px;
+					background-position: center center;
+					background-repeat: no-repeat;
+
+					&.bullet-location {
+						background-image: url('/img/bullet-location.png');
+					}
+					&.bullet-email {
+						background-image: url('/img/bullet-email.png');
+					}
+					&.bullet-about {
+						background-image: url('/img/bullet-about.png');
+					}
+				}
+
+				p:last-child {
+					margin-bottom: 0px;
+				}
+			}
+		}
+	}
+}
+
+/* Styles for screens that are atleast 768px; */
+@media #{$small} {
+	#profile {
+		.profile-picture {
+			float: right;
+		}
+
+		.profile-info {
+			text-align: left;
+		}
+	}
+}
