@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>Internal Server Error</title>
-	</head>
-	<body>
-		<h1>500 Internal Server Error.</h1>
-		<p>A website error has occured. The website administrator has been notified of the issue. Sorry for the temporary inconvenience.</p>
-		<a href="{{ app.request.url }}">Visit the home page</a>
-	</body>
-</html>
+{% extends 'layout.html.twig' %}
+
+{# Configuration #}
+{% set title = '500 Internal Server Error' %}
+
+{# Render#}
+{% block content %}
+	<h1>500 Internal Server Error</h1>
+	<p>A website error has occured. The website administrator has been notified of the issue. Sorry for the temporary inconvenience.</p>
+	<a href="{{ app.request.url }}">Visit the home page</a>
+{% endblock content %}
