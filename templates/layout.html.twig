@@ -4,7 +4,7 @@
 		<!-- Metas -->
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width">
-		<title>Simple Slim example</title>
+		<title>{{ title ? title : 'Simple Slim example' }}</title>
 		<!-- Styles -->
 		<link rel="stylesheet" href="css/style.css">
 		{% block head_styles %}{% endblock %}
