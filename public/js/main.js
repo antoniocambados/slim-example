@@ -1,15 +1,14 @@
 $(document).ready(function() {
 	// Set full-height sections
-	function set_full_height(selector) {
-		$(window).resize(function() {
-			$(selector).each(function(index) {
-				window_height   = $(window).height();
-				selector_height = $(this).height();
-				$(this).height( (selector_height > window_height) ? selector_height : window_height );
-			});
+	function set_full_height (selector) {
+		$(selector).each(function(i, e) {
+			$(e).height('auto');
+			$(e).height(Math.max($(e).height(), $(window).height()));
 		});
-		$(window).resize();
 	};
 
-	set_full_height(".full-height-wrapper");
+	// Fire on resize
+	$(window).resize(function() {
+		set_full_height(".full-height-wrapper");
+	}).resize();
 });
