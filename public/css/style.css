@@ -6192,14 +6192,20 @@ a.th {
   max-width: 800px;
 }
 
-/*
+/**
  * Background
  */
 body {
   background-position: top center;
   background-repeat: no-repeat;
   background-image: url("/img/background.png");
-  margin-top: 50px;
+}
+
+/**
+ * Sections
+ */
+section {
+  padding: 50px 0;
 }
 
 /*
