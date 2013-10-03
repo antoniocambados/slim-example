@@ -11,5 +11,5 @@ $(document).ready(function() {
 		$(window).resize();
 	};
 
-	set_full_height(".full-height");
+	set_full_height(".full-height-wrapper");
 });
