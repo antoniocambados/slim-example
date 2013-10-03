@@ -6204,16 +6204,13 @@ body {
 /**
  * Sections
  */
-section {
-  padding: 50px 0;
-}
-
 .full-height-wrapper {
   display: table;
 }
 .full-height-wrapper .full-height-container {
   display: table-cell;
   vertical-align: middle;
+  padding: 20px 0;
 }
 
 /*
