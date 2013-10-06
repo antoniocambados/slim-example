@@ -14,8 +14,10 @@ body {
  */
 .full-height-wrapper {
 	display: table;
+	width: 100%;
 
 	.full-height-container {
+		width: 100%;
 		display: table-cell;
 		vertical-align: middle;
 		padding: 20px 0;

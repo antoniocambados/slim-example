@@ -6206,8 +6206,10 @@ body {
  */
 .full-height-wrapper {
   display: table;
+  width: 100%;
 }
 .full-height-wrapper .full-height-container {
+  width: 100%;
   display: table-cell;
   vertical-align: middle;
   padding: 20px 0;
@@ -6248,6 +6250,9 @@ h1, h2, h3, h4, h5, h6 {
   right: -14px;
   border-width: 0 0 64px 64px;
   border-color: transparent transparent #2a3558 transparent;
+}
+#profile .profile-info {
+  position: relative;
 }
 #profile .profile-info h1 {
   text-align: center;
