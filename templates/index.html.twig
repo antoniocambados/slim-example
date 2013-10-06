@@ -2,4 +2,33 @@
 
 {% block content %}
 	{% include "index/_profile.html.twig" %}
+	<div id="profile-transition"></div>
+	<section id="section-2" class="full-height-wrapper">
+		<div class="full-height-container">
+			<p>Hello!</p>
+		</div>
+	</section>
 {% endblock content %}
+
+{% block body_scripts %}
+<script type="text/javascript">
+	$(document).ready(function() {
+		var sscroll = $.superscrollorama();
+		/*
+		sscroll.addTween('.profile-info h1', TweenMax.fromTo($('.profile-picture'), 2, {css:{opacity:1}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:0, top:'-100px'}, ease:Quad.easeInOut}), 0, 100);
+		*/
+		sscroll.addTween(
+		  '#section-2',
+		  (new TimelineLite())
+		    .append([
+		      TweenMax.fromTo($('.profile-picture'), 1, 
+		        {css:{opacity: 1, scale: 1}, immediateRender:true}, 
+		        {css:{opacity: 0, left: -100, scale: 0.9}}),
+		      TweenMax.fromTo($('.profile-info'), 1, 
+		        {css:{opacity: 1, scale: 1}, immediateRender:true}, 
+		        {css:{opacity: 0, right: -100, scale: 0.9}})
+		    ]), 250, -250
+		);
+	});
+</script>
+{% endblock body_scripts%}
