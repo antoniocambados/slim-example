@@ -13,11 +13,7 @@
 		{% block head_scripts %}{% endblock %}
 	</head>
 	<body>
-		<div class="row">
-			<div class="large-12 columns">
-				{% block content %}{% endblock %}
-			</div>
-		</div>
+		{% block content %}{% endblock %}
 		<script>
 			document.write('<script src=' +
 			('__proto__' in {} ? '/js/vendor/zepto' : '/js/vendor/jquery.min') +
