@@ -1,6 +1,17 @@
 // Make sure the charset is set appropriately
 @charset "UTF-8";
 
+// Project variables
+$color-background:  #3A4D77;
+$color-text-light:  #D7DFF0;
+$color-text-dark:   #2A3558;
+$color-text-darker: #19233B;
+$color-lime:        #99CC33;
+$color-lime-bright: #C8F44B;
+$color-yellow:      #FFD600;
+$color-orange:      #FF8500;
+$color-red:         #EE4D4D;
+
 // Web fonts
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 
