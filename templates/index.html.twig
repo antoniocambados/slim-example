@@ -3,3 +3,20 @@
 {% block content %}
 	{% include "index/_profile.html.twig" %}
 {% endblock content %}
+
+{% block body_scripts %}
+<script src="/js/vendor/jquery.plax.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('.profile-plax-background .background').plaxify({"xRange":3, "yRange":5, "invert":true});
+		$('.profile-plax-background .moon').plaxify({"xRange":5, "yRange":10, "invert":true});
+		$('.profile-plax-background .cloud-1').plaxify({"xRange":50, "yRange":5, "invert":true});
+		$('.profile-plax-background .cloud-2').plaxify({"xRange":120, "yRange":15, "invert":true});
+		$('.profile-plax-background .field').plaxify({"xRange":30, "yRange":10, "invert":true});
+		$('.profile-picture-img').plaxify({"xRange":70, "yRange":35});
+		$.plax.enable();
+	});
+</script>
+
+{% endblock body_scripts %}

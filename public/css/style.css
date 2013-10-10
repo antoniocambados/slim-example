@@ -6228,10 +6228,44 @@ h1, h2, h3, h4, h5, h6 {
 #profile .profile-picture {
   max-height: 300px;
   max-width: 300px;
-  background-color: #ffffff;
   border: 7px solid #2a3558;
   margin: 0 auto;
   position: relative;
+}
+#profile .profile-picture .profile-plax-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+#profile .profile-picture .profile-plax-wrapper .profile-plax-background {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 300px;
+}
+#profile .profile-picture .profile-plax-wrapper .profile-plax-background .plax {
+  position: absolute;
+}
+#profile .profile-picture .profile-plax-wrapper .profile-plax-background .background {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  max-width: 340px;
+}
+#profile .profile-picture .profile-plax-wrapper .profile-plax-background .cloud-1 {
+  left: -30px;
+}
+#profile .profile-picture .profile-plax-wrapper .profile-plax-background .cloud-2 {
+  right: -70px;
+}
+#profile .profile-picture .profile-plax-wrapper .profile-plax-picture {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  clear: both;
 }
 #profile .profile-picture .triangle {
   position: absolute;
