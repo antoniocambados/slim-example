@@ -1,5 +1,8 @@
 <?php
 require '../vendor/autoload.php';
+require '../config/config_bootstrap.php';
+
+use Portfolio\Models\Profile;
 
 // Prepare app
 $app = new \Slim\Slim(array(
@@ -43,7 +46,8 @@ $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 
 // Define routes
 $app->get('/', function () use ($app) {
-    $app->render('index.html.twig', array('date' => new \DateTime('last friday')));
+    $profile = Profile::first();
+    $app->render('index.html.twig', array('profile' => $profile));
 });
 
 // 404 Not Found handler

@@ -21,23 +21,20 @@
 			</div>
 			<div class="large-6 columns">
 				<div class="profile-info">
-					<h1>Antonio Cambados</h1>
+					<h1>{{ profile.name }}</h1>
 					<table class="large-12 columns">
 						<tbody>
 							<tr>
 								<td title="Location" class="bullet bullet-location"></td>
-								<td>O Grove, Pontevedra, Spain</td>
+								<td>{{ profile.location }}</td>
 							</tr>
 							<tr>
 								<td title="Email" class="bullet bullet-email"></td>
-								<td>undisclosed.email@mailprovider.com</td>
+								<td>{{ profile.email }}</td>
 							</tr>
 							<tr>
 								<td title="About" class="bullet bullet-about"></td>
-								<td>
-									<p>Hi! I am a web programmer. I create web applications based on <strong>HTML5 standards</strong>.</p>
-									<p>This web application is based on the <strong>Slim framework</strong> for PHP, and I have used things like Sass, Foundation, Modernizr and Twig.</p>
-								</td>
+								<td>{{ profile.about|raw }}</td>
 							</tr>
 						</tbody>
 					</table>

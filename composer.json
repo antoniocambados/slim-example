@@ -15,6 +15,12 @@
         "slim/slim": ">=2.3.0",
         "slim/views": "0.*",
         "slim/extras": "2.*",
-        "twig/twig": "1.*"
+        "twig/twig": "1.*",
+        "illuminate/database": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Portfolio": "app/"
+        }
     }
 }
