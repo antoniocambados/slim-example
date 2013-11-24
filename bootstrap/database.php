@@ -1,5 +1,5 @@
 <?php
-require 'database.php';
+require __DIR__.'/../app/config/database.php';
 
 // Register databases
 $capsule = new \Illuminate\Database\Capsule\Manager;

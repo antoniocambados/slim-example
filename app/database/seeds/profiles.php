@@ -1,6 +1,5 @@
 <?php
-require __DIR__.'/../../vendor/autoload.php';
-require __DIR__.'/../../config/config_bootstrap.php';
+require __DIR__.'/../../../bootstrap/autoload.php';
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Seeder;

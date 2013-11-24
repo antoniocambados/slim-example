@@ -1,12 +1,11 @@
 <?php
-require '../vendor/autoload.php';
-require '../config/config_bootstrap.php';
+require '../bootstrap/autoload.php';
 
 use Portfolio\Models\Profile;
 
 // Prepare app
 $app = new \Slim\Slim(array(
-    'templates.path' => '../templates',
+    'templates.path' => '../app/views',
     'mode' => 'development',
     'log.level' => \Slim\Log::ERROR,
     'log.enabled' => true,
@@ -35,7 +34,7 @@ $app->configureMode('development', function () use ($app) {
 $app->view(new \Slim\Views\Twig());
 $app->view->parserOptions = array(
     'charset' => 'utf-8',
-    'cache' => realpath('../templates/cache'),
+    'cache' => realpath('../app/views/cache'),
     'auto_reload' => true,
     'strict_variables' => false,
     'autoescape' => true
