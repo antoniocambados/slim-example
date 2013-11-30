@@ -1,9 +1,10 @@
-<div id="categories-container">
-	{% for category in categories %}
+{% extends 'layout.html.twig' %}
+
+{% block content %}
 	<section id="category-{{ category.name }}" class="full-height-wrapper row">
 		<div class="full-height-container">
 			<div class="large-12 columns">
-				<a href="/category/{{ category.permalink }}"><h2>{{ category.title }}</h2></a>
+				<h1>{{ category.title }}</h1>
 				<p>{{ category.description|raw }}</p>
 				<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 cards">
 					{% for project in category.projects %}
@@ -21,5 +22,4 @@
 			</div>
 		</div>
 	</section>
-	{% endfor %}
-</div>
+{% endblock content %}

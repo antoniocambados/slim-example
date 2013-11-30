@@ -1,0 +1,20 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+	<section id="project-{{ project.name }}" class="full-height-wrapper row">
+		<div class="full-height-container">
+			<div class="large-12 large-centered columns text-center">
+				<img src="/img/project/{{ project.name }}-logo.png" alt="{{ project.title }} logo"/>
+			</div>
+			<div class="large-12 columns">
+				<h1>{{ project.title }}</h1>
+				<p>{{ project.description|raw }}</p>
+				<p>Tags:
+					{% for tag in project.tags|split(',') %}
+						<span class="label secondary">{{ tag }}</span>
+					{% endfor %}
+				</p>
+			</div>
+		</div>
+	</section>
+{% endblock content %}
