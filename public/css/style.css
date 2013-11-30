@@ -6323,6 +6323,21 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0px;
 }
 
+/*
+ * Categories
+ */
+section[id^="category-"] li .item {
+  -webkit-transition: background-color 300ms ease-out;
+  -moz-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+  background-color: #2a3558;
+  text-align: center;
+  padding: 10px;
+}
+section[id^="category-"] li .item:hover {
+  background-color: #19233b;
+}
+
 /* Styles for screens that are atleast 768px; */
 @media only screen and (min-width: 768px) {
   #profile .profile-picture {

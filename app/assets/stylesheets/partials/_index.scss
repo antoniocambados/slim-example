@@ -124,6 +124,22 @@
 	}
 }
 
+/*
+ * Categories
+ */
+section[id^="category-"] {
+	li .item {
+		@include single-transition(background-color);
+		background-color: $color-text-dark;
+		text-align: center;
+		padding: 10px;
+
+		&:hover {
+			background-color: $color-text-darker;
+		}
+	}
+}
+
 /* Styles for screens that are atleast 768px; */
 @media #{$small} {
 	#profile {

@@ -1,0 +1,23 @@
+<div id="categories-container">
+	{% for category in categories %}
+	<section id="category-{{ category.name }}" class="full-height-wrapper row">
+		<div class="full-height-container">
+			<div class="large-12 columns">
+				<h2>{{ category.title }}</h2>
+				<p>{{ category.description|raw }}</p>
+				<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3 cards">
+					{% for project in category.projects %}
+					<li>
+						<div class="item">
+							<img src="/img/project/{{ project.name }}-logo.png" alt="{{ project.title }} logo"/>
+							<h3>{{ project.title }}</h3>
+							<p>{{ project.description }}</p>
+						</div>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</section>
+	{% endfor %}
+</div>

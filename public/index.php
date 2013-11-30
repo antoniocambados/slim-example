@@ -43,8 +43,14 @@ $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 
 // Define routes
 $app->get('/', function () use ($app) {
-    $profile = Profile::first();
-    $app->render('index.html.twig', array('profile' => $profile));
+    // Get all the objects needed for the view
+    $parameters = array(
+      'profile'    => Profile::first(),
+      'categories' => Category::with('projects')->get(),
+    );
+
+    // Render view
+  $app->render('index.html.twig', $parameters);
 });
 
 // 404 Not Found handler
