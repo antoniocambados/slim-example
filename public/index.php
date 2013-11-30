@@ -1,8 +1,6 @@
 <?php
 require '../bootstrap/autoload.php';
 
-use Portfolio\Models\Profile;
-
 // Prepare app
 $app = new \Slim\Slim(array(
     'templates.path' => '../app/views',

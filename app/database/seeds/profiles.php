@@ -3,7 +3,6 @@ require __DIR__.'/../../../bootstrap/autoload.php';
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Illuminate\Database\Seeder;
-use Portfolio\Models\Profile;
 
 class ProfilesSeeder extends Seeder {
 
