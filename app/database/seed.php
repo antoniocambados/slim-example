@@ -5,6 +5,8 @@ $seedsDirectory = __DIR__.'/seeds';
 // Seed files, in order of execution
 $seeds = array(
 	'profiles',
+	'categories',
+	'projects',
 );
 
 // Execute all the migrations
