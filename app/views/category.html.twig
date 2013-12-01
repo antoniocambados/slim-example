@@ -10,7 +10,7 @@
 					{% for project in category.projects %}
 					<li>
 						<div class="item">
-							<a href="/category/{{ category.permalink }}/{{ project.permalink }}">
+							<a href="{{ app.urlFor('project', {'category': category.permalink, 'project': project.permalink}) }}">
 								<img src="/img/project/{{ project.name }}-logo.png" alt="{{ project.title }} logo"/>
 								<h3>{{ project.title }}</h3>
 							</a>
