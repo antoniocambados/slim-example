@@ -6,7 +6,7 @@ use \Slim\Slim;
 
 class Controller {
 
-	private $app;
+	protected $app;
 
 	public function __construct(Slim $app) {
 		$this->app = $app;

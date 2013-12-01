@@ -15,9 +15,17 @@ class CategoryController extends Controller {
 	 * @param string $category_permalink The identifying permalink of the category.
 	 */
 	public function index($category_permalink) {
+		// Get the category
+		$category = Category::with('projects')->where('permalink', '=', $category_permalink)->first();
+
+		// Ensure the object has been found
+		if (!$category) {
+			$this->app->notFound();
+		}
+
 		// Get all the objects needed for the view
 		$parameters = array(
-			'category' => Category::with('projects')->where('permalink', '=', $category_permalink)->first(),
+			'category' => $category,
 		);
 
 		// Render view
@@ -32,10 +40,20 @@ class CategoryController extends Controller {
 	 * @param string $project_permalink The identifying permalink of the project.
 	 */
 	public function project($category_permalink, $project_permalink) {
+		// Get the category
+		$category = Category::where('permalink', '=', $category_permalink)->first();
+		if ($category) {
+			$project  = Project::where('permalink', '=', $project_permalink)->where('category_id', '=', $category->id)->first();
+		}
+
+		// Ensure the objects have been found
+		if (!$category || !$project) {
+			$this->app->notFound();
+		}
+
 		// Get all the objects needed for the view
-		$category   = Category::where('permalink', '=', $category_permalink)->first();
 		$parameters = array(
-			'project' => Project::where('permalink', '=', $project_permalink)->where('category_id', '=', $category->id)->first(),
+			'project' => $project,
 		);
 
 		// Render view
