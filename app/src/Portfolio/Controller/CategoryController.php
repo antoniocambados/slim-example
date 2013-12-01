@@ -25,7 +25,8 @@ class CategoryController extends Controller {
 
 		// Get all the objects needed for the view
 		$parameters = array(
-			'category' => $category,
+			'category'    => $category,
+			'breadcrumbs' => $this->getBreadcrumbs($category),
 		);
 
 		// Render view
@@ -53,10 +54,35 @@ class CategoryController extends Controller {
 
 		// Get all the objects needed for the view
 		$parameters = array(
-			'project' => $project,
+			'project'     => $project,
+			'breadcrumbs' => $this->getBreadcrumbs($category, $project),
 		);
 
 		// Render view
 		$this->render('project.html.twig', $parameters);
+	}
+
+	/**
+	 * Returns the corresponding breadcrumbs for the
+	 * specified sources.
+	 */
+	private function getBreadcrumbs($category, $project = null) {
+		$breadcrumbs   = $this->breadcrumbs();
+		$breadcrumbs[] = array(
+			'title' => $category->title,
+			'url'   => $project ? $this->app->urlFor('category', array('category' => $category->permalink)) : null,
+			'class' => $project ? '' : 'current',
+		);
+
+		if ($project) {
+			$breadcrumbs[] = array(
+				'title' => $project->title,
+				// 'url'   => $this->app->urlFor('project', array('category' => $category->permalink, 'project' => $project->permalink)),
+				'url'   => '#',
+				'class' => 'current'
+			);
+		}
+
+		return $breadcrumbs;
 	}
 }

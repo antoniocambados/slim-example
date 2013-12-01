@@ -3,6 +3,7 @@
 {% block content %}
 	<section id="category-{{ category.name }}" class="full-height-wrapper row">
 		<div class="full-height-container">
+			{% include "shared/_breadcrumbs.html.twig" %}
 			<div class="large-12 columns">
 				<h1>{{ category.title }}</h1>
 				<p>{{ category.description|raw }}</p>

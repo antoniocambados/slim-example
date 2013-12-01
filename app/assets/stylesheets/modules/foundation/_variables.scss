@@ -546,13 +546,13 @@ $button-border-style: solid;
 // $crumb-border-size: 1px;
 // $crumb-border-style: solid;
 // $crumb-border-color: darken($crumb-bg, $crumb-function-factor);
-// $crumb-radius: $global-radius;
+   $crumb-radius: 0;
 
 // We use these to set various text styles for breadcrumbs.
 
 // $crumb-font-size: em-calc(11);
 // $crumb-font-color: $primary-color;
-// $crumb-font-color-current: #333;
+   $crumb-font-color-current: #AAA;
 // $crumb-font-color-unavailable: #999;
 // $crumb-font-transform: uppercase;
 // $crumb-link-decor: underline;

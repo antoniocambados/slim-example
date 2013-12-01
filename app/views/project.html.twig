@@ -3,6 +3,7 @@
 {% block content %}
 	<section id="project-{{ project.name }}" class="full-height-wrapper row">
 		<div class="full-height-container">
+			{% include "shared/_breadcrumbs.html.twig" %}
 			<div class="large-12 large-centered columns text-center">
 				<img src="/img/project/{{ project.name }}-logo.png" alt="{{ project.title }} logo"/>
 			</div>

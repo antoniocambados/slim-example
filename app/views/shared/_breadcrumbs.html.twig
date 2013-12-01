@@ -1,0 +1,7 @@
+{% if breadcrumbs is defined and breadcrumbs is not empty %}
+<nav class="breadcrumbs">
+	{% for link in breadcrumbs %}
+	<a href="{{ link.url ? link.url : '#' }}" class="{{ link.class }}">{{ link.title }}</a>
+	{% endfor %}
+</nav>
+{% endif %}
