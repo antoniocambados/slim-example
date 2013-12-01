@@ -14,7 +14,7 @@ $app->get('/', function () use ($app) {
 // Category index
 $app->get('/category/:category', function ($category) use ($app) {
     $controller = new Portfolio\Controller\CategoryController($app);
-    $controller->index($category);
+    $controller->category($category);
 })->name('category');
 
 // Project

@@ -14,7 +14,7 @@ class CategoryController extends Controller {
 	 * 
 	 * @param string $category_permalink The identifying permalink of the category.
 	 */
-	public function index($category_permalink) {
+	public function category($category_permalink) {
 		// Get the category
 		$category = Category::with('projects')->where('permalink', '=', $category_permalink)->first();
 
