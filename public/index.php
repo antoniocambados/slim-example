@@ -49,9 +49,8 @@ $app->error(function () use ($app) {
     $app->render('500.html.twig');
 });
 
-// Define routes
-require '../app/src/Portfolio/Controller/index.php';
-require '../app/src/Portfolio/Controller/categories.php';
+// Routes
+require '../app/routes/routes.php';
 
 // Run app
 $app->run();
