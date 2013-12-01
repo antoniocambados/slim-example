@@ -19,8 +19,8 @@
         "illuminate/database": "*"
     },
     "autoload": {
-        "classmap": [
-            "app/models"
-        ]
+        "psr-0": {
+            "Portfolio\\": "app/src"
+        }
     }
 }

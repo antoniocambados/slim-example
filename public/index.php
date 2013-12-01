@@ -50,8 +50,8 @@ $app->error(function () use ($app) {
 });
 
 // Define routes
-require '../app/controllers/index.php';
-require '../app/controllers/categories.php';
+require '../app/src/Portfolio/Controller/index.php';
+require '../app/src/Portfolio/Controller/categories.php';
 
 // Run app
 $app->run();
